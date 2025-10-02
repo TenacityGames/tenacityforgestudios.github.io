@@ -2,26 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Essential for responsive design on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tenacity Forge Studios</title>
-    <!-- Load Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for custom theme and font -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    // UPDATED custom color 'tfs-dark' to match the new logo's background (#0A0A0A)
+                    // UPDATED custom color 'tfs-dark' to match the new logo's background (#1A1A1A)
                     colors: {
-                        'tfs-dark': '#0A0A0A', 
+                        'tfs-dark': '#1A1A1A', 
                     },
                     fontFamily: {
-                        // Added 'cinzel-decorative' for the logo-matching text
                         'logo': ['"Cinzel Decorative"', 'serif'],
                         sans: ['Inter', 'sans-serif'],
                     },
-                    // Custom margin to push the element down about 1/4 to 1/3 of the screen height
                     spacing: {
                         'v-quarter': '25vh', 
                     }
@@ -30,58 +25,43 @@
         }
     </script>
     <style>
-        /* Import the Cinzel Decorative font for the logo style */
         @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
-        /* Import the Inter font for a modern look (subtitle uses this) */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in-on-load {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
     </style>
 </head>
-<!-- 
-    The main container is set to full height (min-h-screen) and now uses the new 
-    custom background color: bg-tfs-dark.
-    We use flex-col and justify-between to push the main content up and the footer down.
--->
 <body class="bg-tfs-dark min-h-screen flex flex-col items-center justify-between font-sans">
 
-    <!-- 
-        The text container. This is flex-grow so the text/logo container is pushed 
-        to the top while the footer is pushed to the bottom.
-    -->
     <div class="flex-grow flex flex-col items-center justify-start w-full">
-        <div class="mt-v-quarter text-center p-4">
-            <!-- 
-                H1 now uses the new 'font-logo' class for the matching aesthetic.
-            -->
+        <div class="mt-v-quarter text-center p-4 fade-in-on-load">
             <h1 class="text-white font-logo font-extrabold tracking-tight">
-                <!-- 
-                    Responsive Font Sizing: 
-                    text-5xl (48px) on mobile, scaling up to 7xl (80px) on large screens 
-                -->
                 <span class="text-5xl sm:text-6xl md:text-7xl">
                     Tenacity Forge Studios
                 </span>
             </h1>
             
-            <!-- Optional subtitle for a bit of visual depth (still using 'Inter') -->
             <p class="text-gray-300 mt-4 text-lg sm:text-xl font-sans">
                 Forging Digital Experiences
             </p>
 
-            <!-- 
-                Logo Image: 
-                The source is UPDATED to use the new image file name.
-                The sizes are set to achieve the 6x increase on larger screens.
-            -->
             <img 
                 src="Gemini_Generated_Image_7gywx27gywx27gyw.jpg" 
                 alt="Tenacity Forge Studios Logo" 
-                class="mt-8 mx-auto block rounded-lg shadow-xl h-48 md:h-96 lg:h-[576px] w-auto max-w-full" 
+                class="mt-8 mx-auto block rounded-lg shadow-xl h-48 md:h-96 lg:h-[576px] w-auto max-w-full
+                       transition duration-500 hover:scale-[1.03]" 
                 onerror="this.onerror=null; this.src='https://placehold.co/576x576/1f2937/ffffff?text=TFS';"
             >
         </div>
     </div>
     
-    <!-- Footer Section -->
     <footer class="w-full text-center p-6 mt-4">
         <p class="text-gray-400 text-sm md:text-base">
             Contact us: <a href="mailto:info@tenacityforgestudios.com" class="text-gray-200 hover:text-white transition duration-300">info@tenacityforgestudios.com</a>
@@ -90,7 +70,5 @@
             &copy; 2023 Tenacity Forge Studios. All Rights Reserved.
         </p>
     </footer>
-    <!-- End Footer -->
-
 </body>
 </html>
