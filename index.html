@@ -1,1 +1,65 @@
-<h1>tenacity forge studios</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Essential for responsive design on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenacity Forge Studios</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom theme and font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    // Custom margin to push the element down about 1/4 to 1/3 of the screen height
+                    spacing: {
+                        'v-quarter': '25vh', 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Import the Inter font for a modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+    </style>
+</head>
+<!-- 
+    The main container is set to full height (min-h-screen) and has a black background (bg-black).
+    It uses Flexbox (flex, flex-col) to allow vertical alignment. 
+-->
+<body class="bg-black min-h-screen flex flex-col items-center justify-start font-sans">
+
+    <!-- 
+        The text container.
+        mt-v-quarter uses the custom 25vh (25% viewport height) margin-top 
+        to position the element significantly down the page.
+    -->
+    <div class="mt-v-quarter text-center p-4">
+        <h1 class="text-white font-extrabold tracking-tight">
+            <!-- 
+                Responsive Font Sizing: 
+                text-5xl (48px) on mobile, scaling up to 7xl (80px) on large screens 
+            -->
+            <span class="text-5xl sm:text-6xl md:text-7xl">
+                Tenacity Forge Studios
+            </span>
+        </h1>
+        
+        <!-- Optional subtitle for a bit of visual depth -->
+        <p class="text-gray-300 mt-4 text-lg sm:text-xl">
+            Forging Digital Experiences
+        </p>
+    </div>
+
+    <!-- 
+        Since this is a static site, no JavaScript is needed, but we keep the body tag open 
+        for future expansion. 
+    -->
+</body>
+</html>
+
