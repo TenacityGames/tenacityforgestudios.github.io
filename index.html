@@ -18,8 +18,9 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     spacing: {
-                        // Custom margin to push the element down about 1/3 of the screen height
-                        'v-third': '33vh',
+                        // REMOVED 'v-third'
+                        // NEW custom margin to move the element up significantly (10vh)
+                        'v-top': '10vh',
                     }
                 }
             }
@@ -42,7 +43,7 @@
 <body class="bg-tfs-dark min-h-screen flex flex-col items-center justify-between font-sans">
 
     <div class="flex-grow flex flex-col items-center justify-start w-full">
-        <div class="mt-v-third text-center p-4 fade-in-on-load">
+        <div class="mt-v-top text-center p-4 fade-in-on-load">
             <h1 class="text-white font-logo font-extrabold tracking-tight">
                 <span class="text-5xl sm:text-6xl md:text-7xl">
                     Tenacity Forge Studios
