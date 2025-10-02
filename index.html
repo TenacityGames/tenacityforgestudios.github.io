@@ -12,6 +12,10 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    // Added custom color 'tfs-dark' to match the logo edges
+                    colors: {
+                        'tfs-dark': '#191715', 
+                    },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                     },
@@ -29,10 +33,10 @@
     </style>
 </head>
 <!-- 
-    The main container is set to full height (min-h-screen) and has a black background (bg-black).
-    It uses Flexbox (flex, flex-col) to allow vertical alignment. 
+    The main container is set to full height (min-h-screen) and now uses the new 
+    custom background color: bg-tfs-dark
 -->
-<body class="bg-black min-h-screen flex flex-col items-center justify-start font-sans">
+<body class="bg-tfs-dark min-h-screen flex flex-col items-center justify-start font-sans">
 
     <!-- 
         The text container.
@@ -58,13 +62,7 @@
         <!-- 
             Logo Image: 
             The source is set to 'TFSlogo.jpg'.
-            mt-8 provides the requested spacing below the text (~1 inch).
-            mx-auto centers the image horizontally.
-            
-            Size Adjustment: The logo is now much larger, scaling responsively:
-            - Mobile (default): h-48 (192px, 2x the original size)
-            - Tablet/Medium (md): h-96 (384px, 4x the original size)
-            - Desktop/Large (lg): h-[576px] (576px, 6x the original size)
+            The sizes are set to achieve the 6x increase on larger screens.
         -->
         <img 
             src="TFSlogo.jpg" 
