@@ -29,6 +29,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
+        /* Font Awesome CDN for icons */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -38,10 +42,8 @@
             animation: fadeIn 1.5s ease-out forwards;
         }
         
-        /* Optional: Add space for eventual Font Awesome or SVG icons */
+        /* Updated: social-icon now just ensures flex properties for alignment */
         .social-icon {
-            width: 1.5rem; /* Equivalent to w-6 */
-            height: 1.5rem; /* Equivalent to h-6 */
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -76,23 +78,21 @@
     <footer class="w-full text-center p-6 mt-4">
         <div class="flex justify-end w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
             <div class="flex space-x-4 text-tfs-gold">
-                <a href="https://www.youtube.com/@TenacityForgeStudios" target="_blank" aria-label="Follow us on YouTube" class="hover:text-white transition duration-300 social-icon">
-                    YT
+                <a href="https://www.youtube.com/@TenacityForgeStudios" target="_blank" aria-label="Follow us on YouTube" class="hover:text-white transition duration-300 social-icon text-2xl">
+                    <i class="fab fa-youtube"></i>
                 </a>
-                <a href="https://www.twitch.tv/tenacityforgestudios" target="_blank" aria-label="Follow us on Twitch" class="hover:text-white transition duration-300 social-icon">
-                    TW
+                <a href="https://www.twitch.tv/tenacityforgestudios" target="_blank" aria-label="Follow us on Twitch" class="hover:text-white transition duration-300 social-icon text-2xl">
+                    <i class="fab fa-twitch"></i>
                 </a>
-                <a href="https://bsky.app/profile/tenacityforgestuds.bsky.social" target="_blank" aria-label="Follow us on Bluesky" class="hover:text-white transition duration-300 social-icon">
-                    BS
+                <a href="https://bsky.app/profile/tenacityforgestuds.bsky.social" target="_blank" aria-label="Follow us on Bluesky" class="hover:text-white transition duration-300 social-icon text-2xl">
+                    <i class="fas fa-cloud"></i> </a>
+                <a href="https://www.facebook.com/profile.php?id=61581465533807" target="_blank" aria-label="Follow us on Facebook" class="hover:text-white transition duration-300 social-icon text-2xl">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61581465533807" target="_blank" aria-label="Follow us on Facebook" class="hover:text-white transition duration-300 social-icon">
-                    FB
-                </a>
-                <a href="https://x.com/TenacityForgeSt" target="_blank" aria-label="Follow us on X (formerly Twitter)" class="hover:text-white transition duration-300 social-icon">
-                    X
-                </a>
-                <a href="https://www.instagram.com/tenacityforgestudios/" target="_blank" aria-label="Follow us on Instagram" class="hover:text-white transition duration-300 social-icon">
-                    IG
+                <a href="https://x.com/TenacityForgeSt" target="_blank" aria-label="Follow us on X (formerly Twitter)" class="hover:text-white transition duration-300 social-icon text-2xl">
+                    <i class="fab fa-x-twitter"></i> </a>
+                <a href="https://www.instagram.com/tenacityforgestudios/" target="_blank" aria-label="Follow us on Instagram" class="hover:text-white transition duration-300 social-icon text-2xl">
+                    <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
@@ -106,5 +106,5 @@
             </p>
         </div>
     </footer>
-    </body>
+</body>
 </html>
