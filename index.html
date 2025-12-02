@@ -43,6 +43,12 @@
       justify-content: center;
       align-items: center;
     }
+
+    /* Ensure no default image borders/outlines */
+    img {
+      border: none;
+      outline: none;
+    }
   </style>
 </head>
 <body class="bg-white min-h-screen flex flex-col items-center justify-between font-sans">
@@ -63,8 +69,10 @@
       <img
         src="images/TFS_Logo.png"
         alt="Tenacity Forge Studios Logo"
-        class="mt-8 mx-auto block rounded-lg w-auto max-w-full h-[144px] md:h-[288px] lg:h-[432px] transition duration-500 border-none outline-none shadow-none"
-        onerror="this.onerror=null; this.src='https://placehold.co/288x288/1f2937/ffffff?text=TFS';"
+        class="mt-8 mx-auto block rounded-lg w-auto max-w-full
+               h-[144px] md:h-[288px] lg:h-[432px]
+               transition duration-500 border-none outline-none shadow-none"
+        onerror="this.onerror=null; this.src='https://placehold.co/288x288/ffffff/000000?text=TFS';"
       >
 
       <!-- Projects Section -->
@@ -76,29 +84,26 @@
         <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-4">
           <!-- Project 1 -->
           <a href="https://www.youtube.com/watch?v=4QQ-VrBkRRI" target="_blank"
-             class="flex items-center justify-center gap-2 bg-red-600 text-white rounded-lg p-4 w-72 hover:bg-red-700 transition duration-300 shadow-lg">
+             class="flex items-center justify-center gap-2 bg-red-600 text-white rounded-lg p-4 w-72 hover:bg-red-700 transition duration-300 shadow-lg"
+             title="Watch Beach Escape on YouTube">
+            <i class="fab fa-youtube text-2xl"></i>
             <p class="font-logo text-xl">Beach Escape</p>
-            <div class="mt-3">
-              <i class="fab fa-youtube text-3xl"></i>
-            </div>
           </a>
 
           <!-- Project 2 -->
           <a href="https://www.youtube.com/watch?v=MLw3FsbkOK4" target="_blank"
-             class="flex items-center justify-center gap-2 bg-red-600 text-white rounded-lg p-4 w-72 hover:bg-red-700 transition duration-300 shadow-lg">
+             class="flex items-center justify-center gap-2 bg-red-600 text-white rounded-lg p-4 w-72 hover:bg-red-700 transition duration-300 shadow-lg"
+             title="Watch Money Grab on YouTube">
+            <i class="fab fa-youtube text-2xl"></i>
             <p class="font-logo text-xl">Money Grab</p>
-            <div class="mt-3">
-              <i class="fab fa-youtube text-3xl"></i>
-            </div>
           </a>
 
           <!-- Project 3 -->
           <a href="https://www.youtube.com/watch?v=AZfUQ_P7ZPw" target="_blank"
-             class="flex items-center justify-center gap-2 bg-red-600 text-white rounded-lg p-4 w-72 hover:bg-red-700 transition duration-300 shadow-lg">
+             class="flex items-center justify-center gap-2 bg-red-600 text-white rounded-lg p-4 w-72 hover:bg-red-700 transition duration-300 shadow-lg"
+             title="Watch Festival of the Dead on YouTube">
+            <i class="fab fa-youtube text-2xl"></i>
             <p class="font-logo text-xl">Festival of the Dead</p>
-            <div class="mt-3">
-              <i class="fab fa-youtube text-3xl"></i>
-            </div>
           </a>
         </div>
       </section>
@@ -108,53 +113,69 @@
   <!-- Footer -->
   <footer class="w-full text-center p-6 mt-8">
     <div class="flex justify-center w-full mb-6">
-      <div class="flex flex-wrap justify-center gap-4 text-black">
+      <div class="flex flex-wrap justify-center gap-4">
 
         <!-- 1. YouTube -->
-        <a href="https://www.youtube.com/@TenacityForgeStudios" target="_blank" aria-label="YouTube"
-           class="text-3xl border-2 border-red-600 rounded-full p-3 hover:bg-red-600 hover:text-white transition duration-300 shadow-md">
+        <a href="https://www.youtube.com/@TenacityForgeStudios" target="_blank"
+           aria-label="YouTube"
+           title="YouTube"
+           class="text-3xl border-2 border-red-600 text-red-600 rounded-full p-3 hover:bg-red-600 hover:text-white transition duration-300 shadow-md social-icon">
           <i class="fab fa-youtube"></i>
         </a>
 
         <!-- 2. Itch.io -->
-        <a href="https://tenacityforgestudios.itch.io/" target="_blank" aria-label="Itch.io"
-           class="text-3xl border-2 border-red-600 rounded-full p-3 hover:bg-red-600 hover:text-white transition duration-300 shadow-md">
+        <a href="https://tenacityforgestudios.itch.io/" target="_blank"
+           aria-label="Itch.io"
+           title="Itch.io"
+           class="text-3xl border-2 border-red-500 text-red-500 rounded-full p-3 hover:bg-red-500 hover:text-white transition duration-300 shadow-md social-icon">
           <i class="fas fa-gamepad"></i>
         </a>
 
         <!-- 3. Bluesky -->
-        <a href="https://bsky.app/profile/tenacityforgestuds.bsky.social" target="_blank" aria-label="Bluesky"
-           class="text-3xl border-2 border-red-600 rounded-full p-3 hover:bg-red-600 hover:text-white transition duration-300 shadow-md">
+        <a href="https://bsky.app/profile/tenacityforgestuds.bsky.social" target="_blank"
+           aria-label="Bluesky"
+           title="Bluesky"
+           class="text-3xl border-2 border-sky-400 text-sky-400 rounded-full p-3 hover:bg-sky-400 hover:text-white transition duration-300 shadow-md social-icon">
           <i class="fas fa-cloud"></i>
         </a>
 
         <!-- 4. Facebook -->
-        <a href="https://www.facebook.com/profile.php?id=61581465533807" target="_blank" aria-label="Facebook"
-           class="text-3xl border-2 border-red-600 rounded-full p-3 hover:bg-red-600 hover:text-white transition duration-300 shadow-md">
+        <a href="https://www.facebook.com/profile.php?id=61581465533807" target="_blank"
+           aria-label="Facebook"
+           title="Facebook"
+           class="text-3xl border-2 border-blue-600 text-blue-600 rounded-full p-3 hover:bg-blue-600 hover:text-white transition duration-300 shadow-md social-icon">
           <i class="fab fa-facebook-f"></i>
         </a>
 
         <!-- 5. Instagram -->
-        <a href="https://www.instagram.com/tenacityforgestudios/" target="_blank" aria-label="Instagram"
-           class="text-3xl border-2 border-red-600 rounded-full p-3 hover:bg-red-600 hover:text-white transition duration-300 shadow-md">
+        <a href="https://www.instagram.com/tenacityforgestudios/" target="_blank"
+           aria-label="Instagram"
+           title="Instagram"
+           class="text-3xl border-2 border-pink-500 text-pink-500 rounded-full p-3 hover:bg-pink-500 hover:text-white transition duration-300 shadow-md social-icon">
           <i class="fab fa-instagram"></i>
         </a>
 
         <!-- 6. TikTok -->
-        <a href="https://www.tiktok.com/@tenacityforgestudios?lang=en" target="_blank" aria-label="TikTok"
-           class="text-3xl border-2 border-red-600 rounded-full p-3 hover:bg-red-600 hover:text-white transition duration-300 shadow-md">
+        <a href="https://www.tiktok.com/@tenacityforgestudios?lang=en" target="_blank"
+           aria-label="TikTok"
+           title="TikTok"
+           class="text-3xl border-2 border-cyan-400 text-cyan-400 rounded-full p-3 hover:bg-cyan-400 hover:text-white transition duration-300 shadow-md social-icon">
           <i class="fab fa-tiktok"></i>
         </a>
 
         <!-- 7. Twitch -->
-        <a href="https://www.twitch.tv/tenacityforgestudios" target="_blank" aria-label="Twitch"
-           class="text-3xl border-2 border-red-600 rounded-full p-3 hover:bg-red-600 hover:text-white transition duration-300 shadow-md">
+        <a href="https://www.twitch.tv/tenacityforgestudios" target="_blank"
+           aria-label="Twitch"
+           title="Twitch"
+           class="text-3xl border-2 border-purple-600 text-purple-600 rounded-full p-3 hover:bg-purple-600 hover:text-white transition duration-300 shadow-md social-icon">
           <i class="fab fa-twitch"></i>
         </a>
 
         <!-- 8. Twitter/X -->
-        <a href="https://x.com/TenacityForgeSt" target="_blank" aria-label="X (formerly Twitter)"
-           class="text-3xl border-2 border-red-600 rounded-full p-3 hover:bg-red-600 hover:text-white transition duration-300 shadow-md">
+        <a href="https://x.com/TenacityForgeSt" target="_blank"
+           aria-label="X (formerly Twitter)"
+           title="X (formerly Twitter)"
+           class="text-3xl border-2 border-neutral-900 text-neutral-900 rounded-full p-3 hover:bg-neutral-900 hover:text-white transition duration-300 shadow-md social-icon">
           <i class="fab fa-twitter"></i>
         </a>
 
@@ -165,7 +186,7 @@
       <p class="text-black text-sm md:text-base">
         Contact us:
         <a href="mailto:info@tenacityforgestudios.com"
-           class="text-black hover:text-white transition duration-300">info@tenacityforgestudios.com</a>
+           class="text-black hover:text-gray-700 transition duration-300">info@tenacityforgestudios.com</a>
       </p>
       <p class="text-gray-500 text-xs mt-1">
         &copy; 2023 Tenacity Forge Studios. All Rights Reserved.
