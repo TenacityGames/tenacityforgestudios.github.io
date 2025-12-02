@@ -44,7 +44,6 @@
       align-items: center;
     }
 
-    /* Ensure no default image borders/outlines */
     img {
       border: none;
       outline: none;
@@ -70,8 +69,7 @@
         src="images/TFS_Logo.png"
         alt="Tenacity Forge Studios Logo"
         class="mt-8 mx-auto block rounded-lg w-auto max-w-full
-               h-[144px] md:h-[288px] lg:h-[432px]
-               transition duration-500"
+               h-[144px] md:h-[288px] lg:h-[432px]"
         onerror="this.onerror=null; this.src='https://placehold.co/288x288/ffffff/000000?text=TFS';"
       >
 
@@ -82,6 +80,7 @@
         </h2>
 
         <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-4">
+          
           <!-- Project 1 -->
           <a href="https://www.youtube.com/watch?v=4QQ-VrBkRRI" target="_blank"
              class="flex items-center justify-center gap-2 bg-red-600 text-white rounded-lg p-4 w-72 hover:bg-red-700 transition duration-300 shadow-lg"
@@ -105,6 +104,7 @@
             <i class="fab fa-youtube text-2xl"></i>
             <p class="font-logo text-xl">Festival of the Dead</p>
           </a>
+
         </div>
       </section>
     </div>
@@ -115,83 +115,76 @@
     <div class="flex justify-center w-full mb-6">
       <div class="flex flex-wrap justify-center gap-4">
 
-        <!-- 1. YouTube (red) -->
+        <!-- 1. YouTube -->
         <a href="https://www.youtube.com/@TenacityForgeStudios" target="_blank"
-           aria-label="YouTube"
            title="YouTube"
-           class="text-3xl rounded-full p-3 transition duration-300 shadow-md social-icon
-                  border-2 border-[#FF0000] text-[#FF0000] hover:bg-[#FF0000] hover:text-white">
+           class="text-3xl rounded-full p-3 social-icon border-2 border-[#FF0000] text-[#FF0000] hover:bg-[#FF0000] hover:text-white transition duration-300 shadow-md">
           <i class="fab fa-youtube"></i>
         </a>
 
-        <!-- 2. Itch.io (itch red) -->
+        <!-- 2. Itch.io -->
         <a href="https://tenacityforgestudios.itch.io/" target="_blank"
-           aria-label="Itch.io"
            title="Itch.io"
-           class="text-3xl rounded-full p-3 transition duration-300 shadow-md social-icon
-                  border-2 border-[#FA5C5C] text-[#FA5C5C] hover:bg-[#FA5C5C] hover:text-white">
+           class="text-3xl rounded-full p-3 social-icon border-2 border-[#FA5C5C] text-[#FA5C5C] hover:bg-[#FA5C5C] hover:text-white transition duration-300 shadow-md">
           <i class="fas fa-gamepad"></i>
         </a>
 
-        <!-- 3. Bluesky (inline SVG butterfly) -->
+        <!-- 3. Bluesky — INLINE SVG (official butterfly) -->
         <a href="https://bsky.app/profile/tenacityforgestuds.bsky.social" target="_blank"
-           aria-label="Bluesky"
            title="Bluesky"
-           class="text-3xl rounded-full p-3 transition duration-300 shadow-md social-icon
-                  border-2 border-[#1185FE] text-[#1185FE] hover:bg-[#1185FE] hover:text-white">
-
+           class="text-3xl rounded-full p-3 social-icon border-2 border-[#1185FE] text-[#1185FE] hover:bg-[#1185FE] hover:text-white transition duration-300 shadow-md">
+          
+          <!-- Inline Bluesky SVG -->
           <svg xmlns="http://www.w3.org/2000/svg"
                viewBox="0 0 16 16"
                class="w-7 h-7"
-               fill="currentColor"
-               aria-hidden="true">
+               fill="currentColor">
             <path d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948"/>
           </svg>
+
         </a>
 
-        <!-- 4. Facebook (blue) -->
+        <!-- 4. Facebook -->
         <a href="https://www.facebook.com/profile.php?id=61581465533807" target="_blank"
-           aria-label="Facebook"
            title="Facebook"
-           class="text-3xl rounded-full p-3 transition duration-300 shadow-md social-icon
-                  border-2 border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2] hover:text-white">
+           class="text-3xl rounded-full p-3 social-icon border-2 border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition duration-300 shadow-md">
           <i class="fab fa-facebook-f"></i>
         </a>
 
-        <!-- 5. Instagram (pink-ish brand color) -->
+        <!-- 5. Instagram -->
         <a href="https://www.instagram.com/tenacityforgestudios/" target="_blank"
-           aria-label="Instagram"
            title="Instagram"
-           class="text-3xl rounded-full p-3 transition duration-300 shadow-md social-icon
-                  border-2 border-[#E1306C] text-[#E1306C] hover:bg-[#E1306C] hover:text-white">
+           class="text-3xl rounded-full p-3 social-icon border-2 border-[#E1306C] text-[#E1306C] hover:bg-[#E1306C] hover:text-white transition duration-300 shadow-md">
           <i class="fab fa-instagram"></i>
         </a>
 
-        <!-- 6. TikTok (aqua) -->
+        <!-- 6. TikTok -->
         <a href="https://www.tiktok.com/@tenacityforgestudios?lang=en" target="_blank"
-           aria-label="TikTok"
            title="TikTok"
-           class="text-3xl rounded-full p-3 transition duration-300 shadow-md social-icon
-                  border-2 border-[#25F4EE] text-[#25F4EE] hover:bg-[#25F4EE] hover:text-white">
+           class="text-3xl rounded-full p-3 social-icon border-2 border-[#25F4EE] text-[#25F4EE] hover:bg-[#25F4EE] hover:text-white transition duration-300 shadow-md">
           <i class="fab fa-tiktok"></i>
         </a>
 
-        <!-- 7. Twitch (purple) -->
+        <!-- 7. Twitch -->
         <a href="https://www.twitch.tv/tenacityforgestudios" target="_blank"
-           aria-label="Twitch"
            title="Twitch"
-           class="text-3xl rounded-full p-3 transition duration-300 shadow-md social-icon
-                  border-2 border-[#9146FF] text-[#9146FF] hover:bg-[#9146FF] hover:text-white">
+           class="text-3xl rounded-full p-3 social-icon border-2 border-[#9146FF] text-[#9146FF] hover:bg-[#9146FF] hover:text-white transition duration-300 shadow-md">
           <i class="fab fa-twitch"></i>
         </a>
 
-        <!-- 8. X / Twitter (black) -->
+        <!-- 8. X (formerly Twitter) — NEW ICON -->
         <a href="https://x.com/TenacityForgeSt" target="_blank"
-           aria-label="X (formerly Twitter)"
            title="X (formerly Twitter)"
-           class="text-3xl rounded-full p-3 transition duration-300 shadow-md social-icon
-                  border-2 border-[#000000] text-[#000000] hover:bg-[#000000] hover:text-white">
-          <i class="fab fa-twitter"></i>
+           class="text-3xl rounded-full p-3 social-icon border-2 border-black text-black hover:bg-black hover:text-white transition duration-300 shadow-md">
+
+          <!-- Official X Logo (SVG) -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="28" height="28"
+               viewBox="0 0 24 24"
+               fill="currentColor">
+            <path d="M18.244 2H21.5l-6.77 7.71L23 22h-6.436l-5.033-6.647L5.5 22H2.245l7.27-8.285L1 2h6.497l4.57 6.087L18.243 2z"/>
+          </svg>
+
         </a>
 
       </div>
